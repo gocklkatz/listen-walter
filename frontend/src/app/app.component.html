@@ -1,0 +1,13 @@
+<h1>Hello  to the {{ title }}!</h1>
+<p>Running!!! 🎉</p>
+
+<h2>Employees</h2>
+<ul>
+@for (employee of employees; track employee.id) {
+  <li>{{ employee.name }}, {{employee.email}}</li>
+  } @empty {
+  <li>There are no items.</li>
+  }
+</ul>
+
+<app-login-form (onSubmitLoginEvent)="handleLoginEvent($event)"/>
