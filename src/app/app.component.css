@@ -33,6 +33,10 @@ input {
   background-color: #d0c2e1;
 }
 
+input:focus {
+  outline: none;
+}
+
 #addButton {
   color: black;
   background-color: #c3b3d1;
