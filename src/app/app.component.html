@@ -2,6 +2,10 @@
 
 <main>
   <ul id="users">
+    <li>
+      <input type="text" [(ngModel)]="newListName" (keydown.control.enter)="onAddList()" placeholder="New list name" />
+    </li>
+
     @for (list of lists; track list.id) {
     <li>
       <app-list
