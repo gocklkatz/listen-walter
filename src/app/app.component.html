@@ -1,0 +1,21 @@
+<app-header />
+
+<main>
+  <ul id="users">
+    @for (list of lists; track list.id) {
+    <li>
+      <app-list
+        [list]="list"
+        [selected]="list.id === selectedListId"
+        (select)="onSelectList($event)"
+      />
+    </li>
+    }
+  </ul>
+
+  @if (selectedList) {
+  <app-tasks [userId]="selectedList.id" [name]="selectedList.name" />
+  } @else {
+  <p id="fallback">Select a list to see its tasks!</p>
+  }
+</main>
