@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { type List } from './list.model';
-import { CardComponent } from "../shared/card/card.component";
+import { CardComponent } from "../../shared/card/card.component";
 
 @Component({
     selector: 'app-list',

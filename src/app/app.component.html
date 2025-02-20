@@ -1,21 +1,7 @@
 <app-header />
 
 <main>
-  <ul id="users">
-    <li>
-      <input type="text" [(ngModel)]="newListName" (keydown.control.enter)="onAddList()" placeholder="New list name" />
-    </li>
-
-    @for (list of lists; track list.id) {
-    <li>
-      <app-list
-        [list]="list"
-        [selected]="list.id === selectedListId"
-        (select)="onSelectList($event)"
-      />
-    </li>
-    }
-  </ul>
+  <app-lists [(lists)]="lists" [(selectedListId)]="selectedListId"/>
 
   @if (selectedList) {
   <app-tasks [userId]="selectedList.id" [name]="selectedList.name" />
